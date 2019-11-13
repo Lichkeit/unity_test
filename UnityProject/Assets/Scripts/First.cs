@@ -23,14 +23,30 @@ public class First : MonoBehaviour
 
     public bool dead = true;      //布林值     是否死亡
 
+  
+    public Transform bird;
+    public Transform ground;
+
+
+
 
     private void Start()
     {
-        print("Hello~World");
+        Debug.Log("HI~");
+        Debug.LogWarning("警告");
+        Debug.LogError("ERROR");
+
+        Debug.Log(Mathf.PI);
+        Debug.Log(Random.Range(1, 10));
+        Debug.Log(Random.value);
+
+        Debug.Log(bird.position);
+        Debug.Log(ground.position);
+
     }
 
     private void Update()
     {
-        print("HI~");
+       
     }
 }

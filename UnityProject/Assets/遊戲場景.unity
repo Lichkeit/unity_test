@@ -690,6 +690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  ground: {fileID: 802114037}
 --- !u!1 &902571481
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,6 +1614,8 @@ MonoBehaviour:
   speed: 0.1
   prop: "\u9EC3\u8272"
   dead: 1
+  bird: {fileID: 652230951}
+  ground: {fileID: 802114037}
 --- !u!4 &2104020064
 Transform:
   m_ObjectHideFlags: 0
