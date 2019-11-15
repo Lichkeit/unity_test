@@ -18,5 +18,13 @@ public class Floor : MonoBehaviour
         ground.Translate(-speed,0, 0);    // Translate代表位移 使用Transform API裡面的Translate來進行程式指令
         
     }
-    
+
+    /// <summary>
+    /// 地板移動
+    /// </summary>
+    private void Move()
+    {
+
+    }
+
 }
