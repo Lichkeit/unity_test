@@ -15,8 +15,7 @@ public class Floor : MonoBehaviour
 
     private void Update()
     {
-        ground.Translate(-speed,0, 0);    // Translate代表位移 使用Transform API裡面的Translate來進行程式指令
-        
+        Move();
     }
 
     /// <summary>
@@ -24,7 +23,9 @@ public class Floor : MonoBehaviour
     /// </summary>
     private void Move()
     {
-
+        //time.deltatime 一個影格的時間(根據電腦效能不同)
+        ground.Translate(-speed*Time.deltaTime ,0, 0);    // Translate代表位移 使用Transform API裡面的Translate來進行程式指令
+        
     }
 
 }

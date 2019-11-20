@@ -10,7 +10,7 @@ public class Bird : MonoBehaviour
 
     [Header("墜落速度")]
     [Range(-0.001f, -0.1f)]
-    public float down = -0.01f;
+    //public float down = -0.01f;
 
     [Header("是否死亡")]
     public bool dead ;
@@ -24,11 +24,11 @@ public class Bird : MonoBehaviour
     }
 
 
-    private void Update()
-    {
-        bird.Translate(0, down  , 0);
+    //private void Update()
+    //{
+       // bird.Translate(0, down  , 0);
         
-    }
+    //}
 
 
     /// <summary>
