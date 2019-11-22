@@ -1661,6 +1661,8 @@ GameObject:
   - component: {fileID: 2104020063}
   - component: {fileID: 2104020065}
   - component: {fileID: 2104020066}
+  - component: {fileID: 2104020067}
+  - component: {fileID: 2104020068}
   m_Layer: 0
   m_Name: "\u7DF4\u7FD2\u7269\u4EF6"
   m_TagString: Untagged
@@ -1707,7 +1709,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104020062}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8340e763633eec74eac2c982e52326b6, type: 3}
   m_Name: 
@@ -1719,9 +1721,35 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104020062}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c640185796a4560488966936c0ad68db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Chicken: {fileID: 652230952}
+--- !u!114 &2104020067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104020062}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3de2551f444d00e4391feecb4f41bb4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2104020068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104020062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c29b885df991a409ccaf0fcdce600e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  run: 0
+  Combo: 100

@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 344}
   m_MaxSize: {x: 4004, y: 8044}
   vertical: 1
-  controlID: 75
+  controlID: 111
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 444}
   m_MaxSize: {x: 22012, y: 10022}
   vertical: 0
-  controlID: 174
+  controlID: 170
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -378,9 +378,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: e0aeffff12faffff66fbffff
+      m_SelectedIDs: ba340000
+      m_LastClickedID: 13498
+      m_ExpandedIDs: 38faffffbaffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -481,20 +481,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefab
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefab
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\USER\Desktop\unity_test\UnityProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 722f0000
-    m_LastClickedID: 12146
-    m_ExpandedIDs: 00000000c42d00009c2f0000b62f0000ca2f0000da2f0000e42f000010300000e431000000ca9a3b
+    m_SelectedIDs: fc320000
+    m_LastClickedID: 13052
+    m_ExpandedIDs: 00000000c82e00009c300000b6300000ca300000da300000e430000010310000e432000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -522,7 +522,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c42d00009c2f0000b62f0000ca2f0000da2f0000e42f000010300000e4310000
+    m_ExpandedIDs: 00000000c82e00009c300000b6300000ca300000da300000e430000010310000e4320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
