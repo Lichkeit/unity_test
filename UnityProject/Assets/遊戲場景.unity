@@ -579,7 +579,7 @@ Transform:
   m_GameObject: {fileID: 652230948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.01, y: 0.12, z: 0}
-  m_LocalScale: {x: 4.5, y: 4.5, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -596,9 +596,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a58a48d77f53a245a2d864c89895167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpUp: 0.5
-  dead: 0
+  jumpUp: 200
+  angle: 3
+  isdead: 0
   bird: {fileID: 652230951}
+  goScore: {fileID: 988536908}
+  goGM: {fileID: 1913287409}
+  rg2D: {fileID: 652230954}
 --- !u!58 &652230953
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -630,7 +634,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -912,12 +916,12 @@ GameObject:
   - component: {fileID: 988536910}
   - component: {fileID: 988536912}
   m_Layer: 5
-  m_Name: Text
+  m_Name: "\u5206\u6578"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &988536909
 RectTransform:
   m_ObjectHideFlags: 0
@@ -968,7 +972,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 99999
+  m_Text: 0
 --- !u!222 &988536911
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1010,7 +1014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1147522935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1581,7 +1585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1913287410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1626,7 +1630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2089093691
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1663,13 +1667,14 @@ GameObject:
   - component: {fileID: 2104020066}
   - component: {fileID: 2104020067}
   - component: {fileID: 2104020068}
+  - component: {fileID: 2104020069}
   m_Layer: 0
   m_Name: "\u7DF4\u7FD2\u7269\u4EF6"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2104020063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1746,10 +1751,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104020062}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94c29b885df991a409ccaf0fcdce600e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   run: 0
   Combo: 100
+--- !u!114 &2104020069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104020062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3328de3516b5641b325c2f0795d1c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
