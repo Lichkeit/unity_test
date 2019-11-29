@@ -3,11 +3,14 @@ using UnityEngine;
 
 public class Floor : MonoBehaviour
 {
+    
+    
+    //靜態.此類別共用
+    //隱藏
     //地板的速度
-
-    [Header("地板移動速度")]
-    [Range(0,10f)]
-    public float speed = 0.1f;
+    //[Header("地板移動速度")]
+    //[Range(0,10f)]
+    public static float speed = 5f;
 
 
     public Transform ground;   // Transform 為物件的方位.距離.SIZE   ground 宣告然為名稱(可以隨便打但不能打程式相關單字)

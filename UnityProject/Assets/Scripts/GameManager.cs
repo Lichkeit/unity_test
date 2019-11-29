@@ -11,17 +11,18 @@ public class GameManager : MonoBehaviour
     [Header("水管群組")]
     public GameObject Pipe;    //GameObject  可以存場景上的物件也可以存專案內的預置物
 
+    [Header("結束遊戲")]
+    public GameObject goFinal;
 
-   
 
-    
+
 
     /// <summary>
     /// 要添加的分數，預設值為1
     /// </summary>
-    private void AddScore(int add=1)
+    public void AddScore(int add=1)
     {
-
+        print("加分");
     }
 
     /// <summary>
@@ -35,9 +36,11 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// 遊戲結束
     /// </summary>
-    private void GameOver()
+    public void GameOver()
     {
+        goFinal.SetActive(true);
 
+        CancelInvoke("SpawnPipe");//取消調用("方法名稱")
     }
 
     /// <summary>

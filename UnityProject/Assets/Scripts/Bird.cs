@@ -20,7 +20,20 @@ public class Bird : MonoBehaviour
     public Transform bird;
 
 
+    [Header("音效區域")]
+    public AudioSource aud;   //背景音樂
+    public AudioClip soundJump, soundPower, soundHit;//音效只播一次  三個音效
+
+   
+
+
+
+
     public GameObject goScore, goGM;  //可以用，來區隔
+
+
+
+    public GameManager gm;
 
     //2D鋼體
     public Rigidbody2D rg2D;
@@ -42,7 +55,22 @@ public class Bird : MonoBehaviour
     //物件觸發開始執行-針對有勾選Trigger的物件
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Dead();
+        //只在(觸碰)到(水管上)(跟)(下)時啟動程式  有判斷比較值時=要有兩個(==)用來判斷是否一樣
+        if (collision.gameObject.name== "水管_上"  || collision.gameObject.name== "水管_下")  
+        {
+            Dead();
+        }
+        
+    }
+
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "通過")
+        {
+            gm.AddScore();
+            aud.PlayOneShot(soundPower, 10);//音源，撥放一次(音效片段，音量)
+        }
     }
 
     private void Start()
@@ -92,6 +120,10 @@ public class Bird : MonoBehaviour
         
         //進階選轉角度+前滾動
         rg2D.SetRotation(angle*rg2D.velocity.y);//只要y不要x
+
+
+
+        aud.PlayOneShot(soundJump, 10);//音源，撥放一次(音效片段，音量)
     }
 
     /// <summary>
@@ -100,6 +132,11 @@ public class Bird : MonoBehaviour
     private void Dead()
     {
         isdead = true;
+        gm.GameOver();
+
+        //靜態成員
+        Floor.speed = 0;  //遊戲結束地板速度=0
+        aud.PlayOneShot(soundHit, 10);//音源，撥放一次(音效片段，音量)
     }
     
     /// <summary>
