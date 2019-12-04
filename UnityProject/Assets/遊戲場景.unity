@@ -1278,7 +1278,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1278381308}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913287410}
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1278381308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1466,7 +1477,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 99999
+  m_Text: 0
 --- !u!222 &1679818231
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1556,7 +1567,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1801186113}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1913287410}
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1801186113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,7 +1708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1913287410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1703,6 +1725,8 @@ MonoBehaviour:
   max_score: 0
   Pipe: {fileID: 4117315951406190706, guid: d3177a803ff5aff48a4dc904045879d2, type: 3}
   goFinal: {fileID: 2089093690}
+  textScore: {fileID: 988536910}
+  textHeight: {fileID: 1679818230}
 --- !u!4 &1913287411
 Transform:
   m_ObjectHideFlags: 0

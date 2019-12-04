@@ -1,28 +1,49 @@
 ﻿
 using UnityEngine;
+using UnityEngine.UI;                     //引用介面API
+using UnityEngine.SceneManagement;        //引用介面API
 
 public class GameManager : MonoBehaviour
 {
     [Header("分數")]
-    public int score = 0;
+    public int score ;
     [Header("最高分數")]
-    public int max_score ;
+    public int max_score;
 
     [Header("水管群組")]
     public GameObject Pipe;    //GameObject  可以存場景上的物件也可以存專案內的預置物
 
     [Header("結束遊戲")]
     public GameObject goFinal;
+    public Text textScore;     //遊玩得到的分數
+    public Text textHeight;    //紀錄最佳分數
 
+
+
+
+    public void Replay()
+    {
+        print("replay");
+        //Application.LoadLevel("遊戲場景")  //舊版API
+        SceneManager.LoadScene("遊戲場景");  //新版API
+    }
+
+    public void Exit()
+    {
+        print("exit");
+        Application.Quit();
+    }
 
 
 
     /// <summary>
     /// 要添加的分數，預設值為1
     /// </summary>
-    public void AddScore(int add=1)
+    public void AddScore(int add = 1)
     {
-        print("加分");
+        score = score + add;
+        textScore.text = score.ToString();
+        SetHeightScore();//呼叫最佳分數 不然數據不會更新
     }
 
     /// <summary>
@@ -30,6 +51,10 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void SetHeightScore()
     {
+        if (score > max_score)
+        {
+            PlayerPrefs.SetInt("最高分數", score);
+        }
 
     }
 
@@ -68,12 +93,19 @@ public class GameManager : MonoBehaviour
         //Invoke("SpawnPipe",1.5f);
 
 
-        InvokeRepeating("SpawnPipe",0,1.5f);
+        InvokeRepeating("SpawnPipe", 0, 1.5f);
         //延遲重複調用("方法名稱",延遲時間,重複頻率)
 
-        
+        max_score = PlayerPrefs.GetInt("最高分數");
+        textHeight.text = max_score.ToString();
+
 
 
 
     }
+
+
+
+
+
 }

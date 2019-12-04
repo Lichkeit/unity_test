@@ -66,7 +66,7 @@ public class Bird : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "通過")
+        if (collision.gameObject.name == "通過" &&  ! isdead)
         {
             gm.AddScore();
             aud.PlayOneShot(soundPower, 10);//音源，撥放一次(音效片段，音量)
@@ -75,7 +75,8 @@ public class Bird : MonoBehaviour
 
     private void Start()
     {
-       
+        Screen.SetResolution(450, 800, false);
+        //螢幕   設定解析度 (寬    高    是否全螢幕);
     }
 
 
@@ -131,6 +132,8 @@ public class Bird : MonoBehaviour
     /// </summary>
     private void Dead()
     {
+        if (isdead) return;
+        
         isdead = true;
         gm.GameOver();
 
